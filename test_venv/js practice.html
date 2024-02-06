@@ -1,85 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Boolean values</title>
+    <title>Rock paper scissors game with js.</title>
 </head>
 
 <body>
-    <h1>Booleans</h1>
-    <p>Rock paer scisers</p>
+    <h1>Using boolean values.</h1>
     <button onclick="
+        const random = Math.random();
+        let computorMove = '';
+        
+        if (random >= 0 && random < 1/3) {
+            computorMove = 'rock';
+        } else if (random >= 1/3 && random < 2/3) {
+            computorMove = 'paper';
+        } else if (random >= 2/3 && random < 1) {
+            computorMove = 'scissers';
+        }
 
-        const randomNumber = Math.random();
+        let result= ''
+        if (computorMove === 'rock') {
+            result = 'game draw .';
+        } else if (computorMove === 'paper') {
+            result = 'you lose !'
+        } else if (computorMove === 'scissers') {
+            result = ' you win !!';
+        }
+        alert(`you chose rock and the computor chose ${computorMove} ,${result}`);
 
+        ">Rock</button>
+    <button onclick="
+        const random = Math.random();
+        let computorMove = '';
+        
+        if (random >= 0 && random < 1/3) {
+            computorMove = 'rock';
+        } else if (random >= 1/3 && random < 2/3) {
+            computorMove = 'paper';
+        } else if (random >= 2/3 && random < 1) {
+            computorMove = 'scissers';
+        }
+
+        let result= ''
+        if (computorMove === 'paper') {
+            result = 'game draw .';
+        } else if (computorMove === 'scissers') {
+            result = 'you lose !'
+        } else if (computorMove === 'rock') {
+            result = ' you win !!';
+        }
+        alert(`you chose paper and the computor chose ${computorMove} ,${result}`);
+
+        ">Paper</button>
+
+    <button onclick="
+        const random = Math.random();
         let computorMove = '';
 
-        if (randomNumber >= 0 && randomNumber < 1/3) {
-            computorMove = 'Rock'}
-          else if (randomNumber >= 1/3 && randomNumber < 2/3) {
-            computorMove = 'Paper';}
-          else if (randomNumber > 2/3 && randomNumber < 1) {
-            computorMove = 'Scissers';
+        if (random >= 0 && random < 1/3) {
+            computorMove = 'rock';
+        } else if (random >= 1/3 && random < 2/3) {
+            computorMove = 'paper';
+        } else if (random >= 2/3 && random < 1) {
+            computorMove = 'scissers';
         }
 
-        let result = '';
+        let result= ''
+        if (computorMove === 'rock') {
+            result = 'you lose !';
+        } else if (computorMove === 'paper') {
+            result = ' you win !!';
+        } else if (computorMove === 'scissers') {
+            result = 'game draw .';
+        }
+        alert(`you chose scisses and the computor chose ${computorMove} ,${result}`);
 
-        if (computorMove === 'Scisser') {
-            result = 'you win!'
-        }
-          else if (computorMove === 'Rock'){
-            result = 'it is a tie.'
-        }
-          else if (computorMove === 'Paper'){
-            result = 'you los!'
-        }
-    alert(`You chose rock, the computor chose ${computorMove}, ${result} .`);
-    ">Rock</button>
-    <button onclick="
-        const randomNumber = Math.random();
-        let computorMove = '';
-        if (randomNumber >= 0 && randomNumber < 1/3) {
-            computorMove = 'Rock'
-        }else if (randomNumber >= 1/3 && randomNumber < 2/3) {
-            computorMove = 'Paper';
-        }else if (randomNumber > 2/3 && randomNumber < 1) {
-            computorMove = 'Scissers';
-        }
-        let result = '';
-    if (computorMove === 'Rock') {
-            result = 'you win!'
-    }
-        else if (computorMove === 'Paper'){
-            result = 'it is a tie.'
-        }
-        else if (computorMove === 'Scisser'){
-            result = 'you los!'
-        }
-         alert(`You chose rock, the computor chose ${computorMove}, ${result} `)
-    ">Paper</button>
-    <button onclick="
-    const randomNumber = Math.random();
-    let computorMove = '';
-    if (randomNumber >= 0 && randomNumber < 1/3) {
-        computorMove = 'Rock'
-    }else if (randomNumber >= 1/3 && randomNumber < 2/3) {
-        computorMove = 'Paper';
-    }else if (randomNumber > 2/3 && randomNumber < 1) {
-        computorMove = 'Scissers';
-    }
-    let result = '';
-    if (computorMove === 'Paper') {
-        result = 'you win!'
-    }
-    else if (computorMove === 'Sissers'){
-        result = 'it is a tie.'
-    }
-    else if (computorMove === 'Rock'){
-        result = 'you los!'
-    }
-    alert(`You chose Scissers, the computor chose ${computorMove}, ${result} `);
-    ">Scissers</button>
+        ">Scissers</button>
+
 </body>
 
 </html>
